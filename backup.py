@@ -154,7 +154,7 @@ class BackupConfig(object):
             use_tls=use_tls)
 
     def _get_vm_dir(self, vm_uuid):
-        vm_dir = self._backup_dir / vm_uuid
+        vm_dir = self._backup_dir + vm_uuid
         vm_dir.mkdir(parents=True, exist_ok=True)
         return vm_dir
 
